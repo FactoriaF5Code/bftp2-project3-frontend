@@ -37,6 +37,13 @@ body {
   position: relative;
 }
 
+.movieCard__img .bookedSign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: brown;
+}
+
 .movieCard__img img{
   height: 200px;
   width: 140px;
