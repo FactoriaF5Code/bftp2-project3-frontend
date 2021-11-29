@@ -35,7 +35,9 @@ export const MovieCatalog = () => {
             </div>
             {showDetailsModal &&
                 <MovieDetails
-                    movie={selectedMovie} />}
+                    movie={selectedMovie}
+                    onClose={() => setShowDetailsModal(false)}
+                />}
         </>
     )
 }
