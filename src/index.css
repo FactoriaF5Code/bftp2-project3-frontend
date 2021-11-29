@@ -7,8 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.movieCatalog {
+.topBar {
+  height: 80px;
+  background-color: bisque;
   display: flex;
+  align-items: center;
+  position:fixed;
+  width: 100%;
+}
+
+.topBar .logo {
+  margin: 30px;
+  font-size: larger;
+  font-weight: bolder;
+}
+
+
+.movieCatalog {
+  padding-top: 90px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .movieCard {
