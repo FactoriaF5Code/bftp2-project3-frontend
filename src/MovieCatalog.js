@@ -24,6 +24,13 @@ export const MovieCatalog = () => {
         setShowDetailsModal(true);
     }
 
+    const onBookMovie = (id, renter) => {
+        new FilmCityApi()
+            .bookMovie(id, renter)
+            .then(() => setShowDetailsModal(false))
+            .then(updateMovies)
+    }
+
     return (
         <>
             <div className="movieCatalog">
@@ -36,6 +43,7 @@ export const MovieCatalog = () => {
             {showDetailsModal &&
                 <MovieDetails
                     movie={selectedMovie}
+                    onBookMovie={onBookMovie}
                     onClose={() => setShowDetailsModal(false)}
                 />}
         </>
