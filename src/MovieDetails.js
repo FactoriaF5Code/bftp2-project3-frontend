@@ -4,6 +4,7 @@ export const MovieDetails = ({ movie, onBookMovie, onClose }) => {
     const [renter, setRenter] = useState("");
     return movie ? <div className="movieDetailsDialog">
         <div className="card">
+            <div className="closeButton">[close]</div>
             <img src={movie.coverImage}></img>
             <div className="details">
                 <h2>{movie.title}</h2>

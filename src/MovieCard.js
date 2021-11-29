@@ -1,6 +1,6 @@
-export const MovieCard = ({ movie }) => {
+export const MovieCard = ({ movie, onClick }) => {
     return (
-        <div
+        <div onClick={onClick}
             className="movieCard"
             id={`movie-${movie.id}`}>
             <div className="movieCard__img">
