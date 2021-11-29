@@ -1,7 +1,8 @@
 export const MovieCard = ({ movie }) => {
-    console.log(movie)
     return (
-        <div className="movieCard" id={`movie-${movie.id}`}>
+        <div
+            className="movieCard"
+            id={`movie-${movie.id}`}>
             <div className="movieCard__img">
                 <img src={movie.coverImage}></img>
             </div>

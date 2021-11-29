@@ -2,20 +2,28 @@ import { useEffect, useState } from "react"
 
 import { FilmCityApi } from './FilmCityApi'
 import { MovieCard } from "./MovieCard";
+import { MovieDetails } from "./MovieDetails";
 
 export const MovieCatalog = () => {
 
     const [movies, setMovies] = useState([]);
+    
+    function updateMovies() {
+        return new FilmCityApi().getMovies().then(setMovies);
+    }
 
     useEffect(() => {
-        new FilmCityApi().getMovies().then(setMovies)
-            .then(() =>
-                console.log(movies.map(m => m.id)))
+        updateMovies()
+
     }, [])
 
     return (
-        <div className="movieCatalog">
-            {movies.map(movie => <MovieCard movie={movie} />)}
-        </div>
+        <>
+            <div className="movieCatalog">
+                {movies.map(movie =>
+                    <MovieCard
+                        movie={movie} />)}
+            </div>
+        </>
     )
 }
