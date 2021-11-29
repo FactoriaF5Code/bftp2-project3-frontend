@@ -7,7 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.movieCatalog {
+  display: flex;
+}
+
+.movieCard {
+  margin: 20px;
+}
+
+.movieCard__img img{
+  height: 200px;
+  width: 140px;
+  object-fit: cover;
+
 }
