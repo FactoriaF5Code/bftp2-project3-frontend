@@ -1,5 +1,8 @@
+import filmCityLogo from './assets/filmCityLogo.png';
+
 export const TopBar = () => {
     return <nav className="topBar">
-        <div className="logo">FilmCity</div>
+        <img src={filmCityLogo} className={"logoImg"}/>
+        <p className={"LemaWeb"}>Nos mueve el cine</p>
     </nav>
 }

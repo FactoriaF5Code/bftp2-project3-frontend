@@ -1,95 +1,161 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    margin: 0 auto;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: black;
 }
 
 .topBar {
-  height: 80px;
-  background-color: bisque;
-  display: flex;
-  align-items: center;
-  position:fixed;
-  width: 100%;
+    height: 80px;
+    background-color: black;
+    box-shadow: 0px 15px 21px -3px rgba(163, 163, 163, 0.84);
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    padding: 20px;
 }
 
-.topBar .logo {
-  margin: 30px;
-  font-size: larger;
-  font-weight: bolder;
+.topBar .logoImg {
+    width: 120px;
+    position: fixed;
+    align-items: center;
+    left: 50px;
 }
 
+.topBar p {
+    color: white;
+    position: fixed;
+    align-items: center;
+    right: 50px;
+    font-family: "Courier New";
+}
 
 .movieCatalog {
-  padding-top: 90px;
-  display: flex;
-  flex-wrap: wrap;
+    padding-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .movieCard {
-  margin: 20px;
+    margin: 30px;
+    width: 143px;
 }
 
 .movieCard__img {
-  position: relative;
+    position: center;
+    border: 2px groove white;
+
 }
 
 .movieCard__img .bookedSign {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: brown;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: brown;
 }
 
-.movieCard__img img{
-  height: 200px;
-  width: 140px;
-  object-fit: cover;
-  cursor: pointer;
-  transition: .5s ease;
-  display: block;
+.movieCard__img img {
+    height: 200px;
+    width: 140px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: .5s ease;
+    display: block;
 }
 
 .movieCard__img:hover img {
-  opacity: 0.5;
+    opacity: 0.5;
 }
 
 .movieDetailsDialog {
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(188,188,188,0.8);
-  position: absolute;
-  top: 0;
-  left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(188, 188, 188, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .movieDetailsDialog .closeButton {
-  cursor: pointer;
-  transition: ease 0.5s;
+    cursor: pointer;
+    transition: ease 0.5s;
 }
 
 .movieDetailsDialog .closeButton:hover {
-  color:blue;
+    color: blue;
 }
 
 .movieDetailsDialog .card {
-  width: 600px;
-  height: 400px;
-  background-color: white;
-  margin: 20%;
-  padding: 30px; 
-  display: flex;
-  
+    width: 600px;
+    height: 400px;
+    background-color: white;
+    margin: 20%;
+    padding: 30px;
+    display: flex;
+
 }
 
 .movieDetailsDialog .card img {
-  width: 200px;
-  object-fit: contain;
+    width: 200px;
+    object-fit: contain;
 }
 
 .movieDetailsDialog .card .details {
-  margin: 20px;
+    margin: 20px;
+}
+
+.footer {
+    height: 80px;
+    background-color: black;
+    color: white;
+    box-shadow: 0px -6px 19px 6px rgba(188, 188, 188, 0.8);
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "Courier New"
+}
+
+.socialMediaLinks {
+    display: flex;
+    align-items: center;
+}
+
+.rrssImage {
+    height: 60px;
+    padding-left: 20px;
+    background-color: black;
+}
+
+@media (max-width: 700px)  {
+    .footer {
+        font-size: 12px;
+        height: 100px;
+        flex-wrap: wrap;
+        padding-top: 20px;
+    }
+
+    .footer :first-child{
+        padding: 0 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .topBar img {
+        display: block;
+        margin-left: auto;
+        justify-content: center;
+    }
+
+    .LemaWeb {
+        display: none;
+    }
 }
