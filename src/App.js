@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import {MovieCatalog} from './MovieCatalog';
 import {TopBar} from './TopBar';
