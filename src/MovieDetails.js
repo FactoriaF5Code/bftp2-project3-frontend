@@ -1,6 +1,7 @@
-import { useState } from "react"
+import {Component, useState} from "react"
+import {MovieRating} from "./MovieRating";
 
-export const MovieDetails = ({ movie, onBookMovie, onClose }) => {
+export const MovieDetails = ({ movie, onBookMovie, onClose, onRatingChange }) => {
     const [renter, setRenter] = useState("");
     return movie ? <div className="movieDetailsDialog">
         <div className="card">
@@ -24,6 +25,7 @@ export const MovieDetails = ({ movie, onBookMovie, onClose }) => {
                         <p className="movieUnavailableMsg">No disponible</p>
                     }
                 </div>
+                <MovieRating movie = {movie} onClick = {(value) => onRatingChange(movie.id, value)} />
             </div>
 
         </div>

@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react"
+import {useEffect, useState} from "react"
 
-import { FilmCityApi } from './FilmCityApi'
-import { MovieCard } from "./MovieCard";
-import { MovieDetails } from "./MovieDetails";
+import {FilmCityApi} from './FilmCityApi'
+import {MovieCard} from "./MovieCard";
+import {MovieDetails} from "./MovieDetails";
 
 export const MovieCatalog = () => {
 
@@ -31,6 +31,10 @@ export const MovieCatalog = () => {
             .then(updateMovies)
     }
 
+    const onRatingChange = (id, value) => {
+        new FilmCityApi().addRating(id, value).then(updateMovies)
+    }
+
     return (
         <>
             <div className="movieCatalog">
@@ -41,11 +45,12 @@ export const MovieCatalog = () => {
                     />)}
             </div>
             {showDetailsModal &&
-                <MovieDetails
-                    movie={selectedMovie}
-                    onBookMovie={onBookMovie}
-                    onClose={() => setShowDetailsModal(false)}
-                />}
+            <MovieDetails
+                movie={selectedMovie}
+                onBookMovie={onBookMovie}
+                onClose={() => setShowDetailsModal(false)}
+                onRatingChange={onRatingChange}
+            />}
         </>
     )
 }
